@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 
 class DescriptionPlace extends StatelessWidget {
+  String textoTitulo;
+  int cantidadEstrellas;
+  String textoDescripcion;
+
+  DescriptionPlace(this.textoTitulo, this.cantidadEstrellas, this.textoDescripcion);
   @override
   Widget build(BuildContext context) {
     final titulo = Container(
@@ -8,10 +13,11 @@ class DescriptionPlace extends StatelessWidget {
         right: 20
       ),
       child: Text(
-        "uyuni",
+        textoTitulo,
             style: TextStyle(
           fontSize: 38,
-            fontWeight: FontWeight.bold
+            fontWeight: FontWeight.bold,
+              fontFamily: "Montserrat"
       ),
       ),
     );
@@ -24,7 +30,7 @@ class DescriptionPlace extends StatelessWidget {
         color: Colors.amber,
       ),
     );
-    final estreellaBorde = Container(
+    final estrellaBorde = Container(
       margin: EdgeInsets.only(
         right: 5
       ),
@@ -33,14 +39,17 @@ class DescriptionPlace extends StatelessWidget {
         color: Colors.black54,
       ),
     );
+    List<Container> estrellas = new List();
+    for(int i = 0; i < 5; i++){
+      if(i < cantidadEstrellas){
+        estrellas.add(estrella);
+      } else{
+        estrellas.add(estrellaBorde);
+      }
+
+    }
     final filaestrellas = Row(
-      children: <Widget>[
-        estrella,
-        estrella,
-        estrella,
-        estrella,
-        estreellaBorde
-      ],
+      children: estrellas,
     );
     final filaTitulo = Row(
       children: <Widget>[
@@ -53,8 +62,8 @@ class DescriptionPlace extends StatelessWidget {
         top: 10
       ),
       child: Text(
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      style: TextStyle(
+        textoDescripcion,
+          style: TextStyle(
           color: Colors.black26
       ),
       ),
@@ -66,7 +75,7 @@ class DescriptionPlace extends StatelessWidget {
 
       ],
     );
-   return null;
+    return null;
   }
 
 }

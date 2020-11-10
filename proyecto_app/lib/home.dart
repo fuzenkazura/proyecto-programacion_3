@@ -9,12 +9,12 @@ class MyHome extends StatelessWidget{
 
     final descriptionPlace = Container(
       margin: EdgeInsets.only(
-       top: 250,
+       top: 100,
         left: 30,
         right: 30
       ),
-      child: DescriptionPlace(),
-    )
+      child: DescriptionPlace("uyuni", 4, "fdshjkfkbwejkbwe wjkvbwkbwjknjkwfjk fwjkbbkwvwjkn jkwvnwjknkw"),
+    );
     return Scaffold(
         appBar: AppBar(
           title: Text(
