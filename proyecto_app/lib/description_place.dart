@@ -64,7 +64,9 @@ class DescriptionPlace extends StatelessWidget {
       child: Text(
         textoDescripcion,
           style: TextStyle(
-          color: Colors.black26
+          color: Colors.black54,
+              fontSize: 13,
+              fontFamily: "Montserrat"
       ),
       ),
     );
@@ -72,10 +74,10 @@ class DescriptionPlace extends StatelessWidget {
       children: <Widget>[
       filaTitulo,
         descripcion
-
       ],
     );
-    return null;
+
+    return descriptionPlace;
   }
 
 }
