@@ -47,6 +47,16 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
    - assets/images/persona11.jpg
+   - assets/images/persona22.jpg
+   - assets/images/persona33.jpg
+   - assets/images/persona44.jpg
+   - assets/images/persona55.jpg
+   - assets/images/lugar1.jpg
+   - assets/images/lugar2.jpg
+   - assets/images/lugar3.jpg
+   - assets/images/lugar4.jpg
+   - assets/images/lugar5.jpg
+   - assets/images/lugar6.jpg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
